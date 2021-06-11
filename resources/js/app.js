@@ -1,20 +1,13 @@
 require('./bootstrap');
 
-import Vuetify from 'vuetify';
+import Vue from 'vue'
 import router from './router'
+import vuetify from './plugins/vuetify'
+import Main from './pages/Main.vue'
 
-import 'vuetify/dist/vuetify.min.css'
-import '@mdi/font/css/materialdesignicons.css'
-
-window.Vue = require('vue').default;
-
-Vue.use(Vuetify)
-
-Vue.component('router-spa', require('./pages/router-spa.vue').default );
-
- const app = new Vue({
-    vuetify: new Vuetify(),
-    el: '#app',
+new Vue({
+    vuetify,
     router,
+    ...Main
 });
 

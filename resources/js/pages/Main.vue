@@ -8,11 +8,12 @@
 </template>
 
 <script>
-  export default {
+export default {
+    el: '#app',
     data: () => ({
         drawer: true,
     }),
-  }
+}
 </script>
 
 
