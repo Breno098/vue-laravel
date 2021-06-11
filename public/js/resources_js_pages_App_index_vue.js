@@ -99,6 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -108,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
         items: [{
           title: 'Home',
           icon: 'mdi-home',
-          route: 'home.index'
+          route: '/'
         }]
       }]
     };
@@ -340,12 +341,12 @@ var render = function() {
                   _vm._v(" "),
                   _vm._l(menuItem.items, function(item) {
                     return _c(
-                      "div",
-                      { key: item.title },
+                      "router-link",
+                      { key: item.title, attrs: { to: item.route } },
                       [
                         _c(
                           "v-list-item",
-                          { staticClass: "d-flex justify-start " },
+                          { staticClass: "d-flex justify-start" },
                           [
                             _c(
                               "v-list-item-icon",

@@ -38,11 +38,12 @@
                 <div v-for="menuItem in menu"  :key="menuItem.title">
                     <v-subheader>{{menuItem.title}}</v-subheader>
 
-                    <div
+                    <router-link
                         v-for="item in menuItem.items"
                         :key="item.title"
+                        :to="item.route"
                     >
-                        <v-list-item class="d-flex justify-start ">
+                        <v-list-item class="d-flex justify-start">
                             <v-list-item-icon>
                                 <v-icon color="blue">{{ item.icon }}</v-icon>
                             </v-list-item-icon>
@@ -51,7 +52,7 @@
                                 <v-list-item-title v-text="item.title"></v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
-                    </div>
+                    </router-link>
 
                     <v-divider color="blue" class="mx-5 mb-5"></v-divider>
                 </div>
@@ -93,7 +94,7 @@ export default {
         menu: [{
                 title: 'Home',
                 items: [
-                    { title: 'Home', icon: 'mdi-home', route: 'home.index' },
+                    { title: 'Home', icon: 'mdi-home', route: '/' },
                 ]
             },
         ],
