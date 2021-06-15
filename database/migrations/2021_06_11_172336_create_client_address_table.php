@@ -17,8 +17,6 @@ class CreateClientAddressTable extends Migration
             $table->id();
             $table->foreignId('client_id')->nullable()->constrained();
             $table->foreignId('address_id')->nullable()->constrained();
-            $table->boolean('main')->nullable();
-            $table->timestamps();
         });
     }
 

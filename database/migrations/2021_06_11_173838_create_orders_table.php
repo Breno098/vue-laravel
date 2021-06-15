@@ -27,7 +27,7 @@ class CreateOrdersTable extends Migration
 
             $table->foreignId('previous_step_id')->nullable()->constrained('orders');
             $table->foreignId('client_id')->nullable()->constrained();
-            $table->foreignId('status_id')->nullable()->constrained('order_status');
+            $table->foreignId('status_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

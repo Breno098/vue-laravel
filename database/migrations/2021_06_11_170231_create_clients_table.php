@@ -18,10 +18,11 @@ class CreateClientsTable extends Migration
             $table->string('name')->nullable();
             $table->string('document')->nullable();
             $table->string('fantasy_name')->nullable();
-            $table->dateTime('birth_date')->nullable();
+            $table->date('birth_date')->nullable();
             $table->enum('type', ['PF','PJ'])->nullable();
             $table->text('notes')->nullable();
             $table->boolean('active')->default(true);
+            $table->foreignId('status_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

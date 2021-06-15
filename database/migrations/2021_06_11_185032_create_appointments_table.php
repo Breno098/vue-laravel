@@ -20,6 +20,7 @@ class CreateAppointmentsTable extends Migration
             $table->boolean('active')->default(true);
             $table->foreignId('client_id')->nullable()->constrained();
             $table->foreignId('order_id')->nullable()->constrained();
+            $table->foreignId('status_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

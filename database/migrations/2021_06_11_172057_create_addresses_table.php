@@ -26,6 +26,7 @@ class CreateAddressesTable extends Migration
             $table->string('floor')->nullable();
             $table->text('description')->nullable();
             $table->boolean('active')->default(true);
+            $table->boolean('main')->nullable();
             $table->timestamps();
         });
     }

@@ -26,6 +26,7 @@ class CreateItemsTable extends Migration
             $table->boolean('active')->default(true);
             $table->integer('warranty_days')->nullable();
             $table->text('warranty_conditions')->nullable();
+            $table->foreignId('status_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
